@@ -1,0 +1,10 @@
+.login {
+  background: white;
+  background-color: white;
+}
+
+.center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

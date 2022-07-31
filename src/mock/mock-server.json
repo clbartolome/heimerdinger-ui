@@ -1,0 +1,118 @@
+{
+  "servers": [
+    {
+      "id": "win-cli-1",
+      "hostName": "win-cli-1",
+      "nodeName": "win-cli-1.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": [
+        {
+          "id": "win-cli-1-KB226761",
+          "kb": "KB226761",
+          "tittle": "Security Intelligence Update for Microsoft Defender Antivirus - KB226761 (Version 1.371.901.0)",
+          "status": "OPEN",
+          "categories": "Critical Updates,Definition Updates"
+        },
+        {
+          "id": "win-cli-1-KB226762",
+          "kb": "KB221161",
+          "tittle": "Security Intelligence Update for Microsoft Defender Antivirus - KB221161 (Version 1.371.901.0)",
+          "status": "OPEN",
+          "categories": "Definition Updates"
+        },
+        {
+          "id": "win-cli-1-KB226763",
+          "kb": "KB221161",
+          "tittle": "Security Intelligence Update for Microsoft Defender Antivirus - KB221161 (Version 1.371.901.0)",
+          "status": "CLOSED",
+          "categories": "Definition Updates"
+        }
+      ]
+    },
+    {
+      "id": "win-cli-2",
+      "hostName": "win-cli-2",
+      "nodeName": "win-cli-2.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-3",
+      "hostName": "win-cli-3",
+      "nodeName": "win-cli-3.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": [
+        {
+          "id": "win-cli-3-KB226763",
+          "kb": "KB226763",
+          "tittle": "Security Intelligence Update for Microsoft Defender KB226763 - KB226761 (Version 1.371.901.0)",
+          "status": "OPEN",
+          "categories": "Critical Updates,Definition Updates"
+        }
+      ]
+    },
+    {
+      "id": "win-cli-4",
+      "hostName": "win-cli-4",
+      "nodeName": "win-cli-4.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-5",
+      "hostName": "win-cli-5",
+      "nodeName": "win-cli-5.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-6",
+      "hostName": "win-cli-6",
+      "nodeName": "win-cli-6.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-7",
+      "hostName": "win-cli-7",
+      "nodeName": "win-cli-7.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-8",
+      "hostName": "win-cli-8",
+      "nodeName": "win-cli-8.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-9",
+      "hostName": "win-cli-9",
+      "nodeName": "win-cli-9.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-10",
+      "hostName": "win-cli-10",
+      "nodeName": "win-cli-10.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-11",
+      "hostName": "win-cli-11",
+      "nodeName": "win-cli-11.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    },
+    {
+      "id": "win-cli-12",
+      "hostName": "win-cli-12",
+      "nodeName": "win-cli-12.redhat.local",
+      "version": "Microsoft Windows Server 2016 Datacenter",
+      "updates": []
+    }
+  ]
+}
