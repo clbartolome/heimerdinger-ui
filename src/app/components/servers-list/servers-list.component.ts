@@ -1,11 +1,11 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {AfterViewInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import {Server} from '../../model/server'
+import { AfterViewInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { Server } from '../../model/server'
 import { ApiService } from './../../service/api.service';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -21,8 +21,11 @@ export class ServerListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
+
+  public showOverlay = true;
+
   constructor(private apiService: ApiService,
-              public dialog: MatDialog) {
+    public dialog: MatDialog) {
     this.apiService.getServers().subscribe((data) => {
       // Assign the data to the data source for the table to render
       this.dataSource = new MatTableDataSource(data);
@@ -33,7 +36,14 @@ export class ServerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      
+
+  }
+
+  ngAfterViewChecked() {
+
+    setTimeout(() => {
+      this.showOverlay = false;
+    }, 250);
   }
 
   applyFilter(event: Event) {
@@ -62,6 +72,6 @@ export class ServerListComponent implements OnInit {
   templateUrl: 'table-dialog.html',
 })
 export class TableDialog {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Server) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Server) { }
 }
 

@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ServerDetailComponent } from './components/server-detail/server-detail.component';
 import { LoginComponent } from './components/login/login.component';
 
@@ -55,7 +56,8 @@ export function initConfig(appConfig: AppConfigService) {
     MatInputModule,
     MatIconModule,
     MatDialogModule,
-    MatGridListModule  ,
+    MatGridListModule,
+    MatProgressSpinnerModule,
     MatCardModule  
   ],
   providers: [{

@@ -23,6 +23,7 @@ export class ServerDetailComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   server: Server;
+  public showOverlay = true; 
 
   constructor(
     public fb: FormBuilder,
@@ -32,10 +33,16 @@ export class ServerDetailComponent implements OnInit {
   ) {
     let id = this.actRoute.snapshot.paramMap.get('id');
     this.readServer(id)
-    
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewChecked(){
+    
+    setTimeout(() => {
+      this.showOverlay = false; 
+   }, 250);
   }
 
   readServer(id: any) {
