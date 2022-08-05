@@ -1,4 +1,5 @@
 {
-  "apiUrl": "http://localhost:3000",
-  "server": "/servers"
+  "apiUrl": "http://localhost:8080",
+  "server": "/servers",
+  "login": "/user/auth"
 }

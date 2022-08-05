@@ -36,6 +36,9 @@ export class ServerDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (localStorage.getItem('jwt') == null) {
+      this.router.navigateByUrl('/login');
+    };
   }
 
   ngAfterViewChecked(){

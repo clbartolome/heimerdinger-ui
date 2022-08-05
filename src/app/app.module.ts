@@ -25,7 +25,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ServerDetailComponent } from './components/server-detail/server-detail.component';
-import { LoginComponent } from './components/login/login.component';
+import { ErrorDialog, LoginComponent } from './components/login/login.component';
+import { AuthInterceptor } from './service/api.interceptor';
+
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+
 
 
 export function initConfig(appConfig: AppConfigService) {
@@ -37,6 +42,7 @@ export function initConfig(appConfig: AppConfigService) {
     AppComponent,
     ServerListComponent,
     TableDialog,
+    ErrorDialog,
     ServerDetailComponent,
     LoginComponent
   ],
@@ -58,14 +64,18 @@ export function initConfig(appConfig: AppConfigService) {
     MatDialogModule,
     MatGridListModule,
     MatProgressSpinnerModule,
-    MatCardModule  
+    MatCardModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
     useFactory: initConfig,
     deps: [AppConfigService],
     multi: true,
-  }],
+  }, 
+  { 
+    provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true 
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

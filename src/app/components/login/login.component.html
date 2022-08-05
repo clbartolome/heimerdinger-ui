@@ -24,17 +24,19 @@
                   <p class="display-12 lh-2" style="margin-top: 2%; color: #eca900; font-size: 15px;
                   ">Windows Servers Management tool</p>
                 </div>
-                <mat-form-field class="example-form-field" appearance="fill" style="width: 70%;">
-                  <mat-label>User</mat-label>
-                  <input matInput type="text">
-                </mat-form-field>
-                <mat-form-field class="example-form-field" appearance="fill" style="width: 70%;">
-                  <mat-label>Password</mat-label>
-                  <input matInput type="password">
-                </mat-form-field>
-                <span class="edit center-element" style="width: 70%;">
-                  <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/servers-list/']" style="width: 100%;">Login</button>
-                </span>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <mat-form-field class="example-form-field" appearance="fill" style="width: 70%;">
+                    <mat-label>User</mat-label>
+                    <input matInput type="text" formControlName="username">
+                  </mat-form-field>
+                  <mat-form-field class="example-form-field" appearance="fill" style="width: 70%;">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                  </mat-form-field>
+                  <span class="edit center-element" style="width: 70%;">
+                    <button type="submit" class="btn btn-secondary btn-sm" style="width: 100%;">Login</button>
+                  </span>
+                </form>
               </div>
             </mat-grid-tile>
           </mat-grid-list>

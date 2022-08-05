@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Server } from '../../model/server'
 import { ApiService } from './../../service/api.service';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from "@angular/router";
 
 
 @Component({
@@ -25,7 +26,8 @@ export class ServerListComponent implements OnInit {
   public showOverlay = true;
 
   constructor(private apiService: ApiService,
-    public dialog: MatDialog) {
+    public dialog: MatDialog,
+    private router: Router) {
     this.apiService.getServers().subscribe((data) => {
       // Assign the data to the data source for the table to render
       this.dataSource = new MatTableDataSource(data);
@@ -36,7 +38,9 @@ export class ServerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    if (localStorage.getItem('jwt') == null) {
+      this.router.navigateByUrl('/login');
+    };
   }
 
   ngAfterViewChecked() {
