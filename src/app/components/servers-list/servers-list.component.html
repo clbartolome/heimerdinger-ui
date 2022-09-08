@@ -7,14 +7,9 @@
 <div class="my-overlay" *ngIf="showOverlay">
   <i class="fa fa-spinner fa-spin" aria-hidden="true"><mat-spinner></mat-spinner></i>
 </div>
-<div>
-  <mat-toolbar color="primary" style="height:80px;">
-    <span>
-      <img src="../assets/images/logo.png" style="width: 59%;">
-    </span>
-    <span class="example-spacer"></span>
-  </mat-toolbar>
-</div>
+<ng-container>
+  <app-header></app-header>
+</ng-container>  
 
 <section>
   <div class="container my-5">

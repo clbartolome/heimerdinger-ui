@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+}
+
+.aligned-with-icon{
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 4px; /* optional */
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+tr.mat-header-row {
+  height: 56px;
+  background-color: #d7d7d5;
+}
+
+th.mat-header-cell {
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+
+
+

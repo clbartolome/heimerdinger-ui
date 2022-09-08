@@ -1,0 +1,21 @@
+<style>
+  .mat-toolbar.mat-primary {
+    background: #151515;
+    color: #fff;
+  }
+  .icon-display {
+   transform: scale(1.75);
+  } 
+</style>
+<div>
+  <mat-toolbar color="primary" style="height:80px;">
+    <span>
+      <img src="../assets/images/logo.png" style="width: 59%;">
+    </span>
+    <span class="example-spacer" style="margin-left: auto; margin-right: 20px;">
+      <div>
+        <mat-icon class="icon-display" style="color:white;" (click)="openDialog()" onmouseover="" style="cursor: pointer;">info_circle_outline</mat-icon>
+      </div>
+    </span>
+  </mat-toolbar>
+</div>

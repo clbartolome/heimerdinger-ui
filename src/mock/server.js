@@ -5,6 +5,8 @@ const router = jsonServer.router(path.join(__dirname, 'mock-server.json'));
 const middlewares = jsonServer.defaults();
 const port = process.env.PORT || 3000;
 
+console.log("started!")
+
 server.use(jsonServer.bodyParser)
 server.use(middlewares);
 

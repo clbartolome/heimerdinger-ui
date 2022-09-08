@@ -9,6 +9,7 @@ import { AppConfigService } from './providers/app-config.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerListComponent } from './components/servers-list/servers-list.component';
+import { HeaderComponent } from './components/header/header.component';
 import { TableDialog } from './components/servers-list/servers-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -40,6 +41,7 @@ export function initConfig(appConfig: AppConfigService) {
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     ServerListComponent,
     TableDialog,
     ErrorDialog,
